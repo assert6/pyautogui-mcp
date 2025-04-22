@@ -14,7 +14,6 @@ def open_wechat() -> None:
     pyperclip.copy('微信')
     pyautogui.hotkey('command', 'v')
     pyautogui.press('enter')
-    pyautogui.press('enter')
 
 @mcp.tool()
 def search_friend(name: str) -> None:
@@ -22,9 +21,8 @@ def search_friend(name: str) -> None:
     pyautogui.hotkey('command', 'f')
     pyperclip.copy(name)
     pyautogui.hotkey('command', 'v')
-    sleep(0.1)
+    sleep(0.5)
     pyautogui.press('enter')
-    sleep(0.1)
 
 @mcp.tool()
 def send_message(message: str) -> None:
