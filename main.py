@@ -1,6 +1,4 @@
-# server.py
 from os import path
-
 from mcp.server.fastmcp import FastMCP
 import pyautogui
 
@@ -108,6 +106,7 @@ def get_keyboard_keys() -> list[str]:
             'up', 'volumedown', 'volumemute', 'volumeup', 'win', 'winleft', 'winright', 'yen',
             'command', 'option', 'optionleft', 'optionright']
 
+
 @mcp.tool()
 def windows_prompt(message: str) -> str:
     """Show a prompt message box. example: windows_prompt('Enter your name')"""
@@ -120,6 +119,7 @@ def screenshot(filename: str = "screenshot.png") -> str:
     image = pyautogui.screenshot()
     image.save(filename)
     return path.abspath(filename)
+
 
 if __name__ == "__main__":
     mcp.run()
