@@ -6,6 +6,7 @@ import pyautogui
 
 # Create an MCP server
 mcp = FastMCP("微信助手")
+pyautogui.PAUSE = 0.05
 
 @mcp.tool()
 def open_wechat() -> None:
@@ -23,6 +24,10 @@ def search_friend(name: str) -> None:
     pyautogui.hotkey('command', 'v')
     sleep(0.5)
     pyautogui.press('enter')
+
+    # 如果当前已经在聊天窗口, 则需要切屏才能定位光标
+    pyautogui.hotkey('command', 'tab')
+    pyautogui.hotkey('command', 'tab')
 
 @mcp.tool()
 def send_message(message: str) -> None:
