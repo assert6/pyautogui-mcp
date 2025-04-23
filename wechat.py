@@ -1,5 +1,6 @@
 from time import sleep
 import pyperclip
+import pyperclipimg
 
 from mcp.server.fastmcp import FastMCP
 import pyautogui
@@ -33,6 +34,14 @@ def search_friend(name: str) -> None:
 def send_message(message: str) -> None:
     """发送消息, 需要先搜索好友"""
     pyperclip.copy(message)
+    pyautogui.hotkey('command', 'v')
+    pyautogui.press('enter')
+
+@mcp.tool()
+def send_image(image_path: str) -> None:
+    """发送图片, 需要先搜索好友"""
+    # 将图片内容复制到剪贴板
+    pyperclipimg.copy(image_path)
     pyautogui.hotkey('command', 'v')
     pyautogui.press('enter')
 

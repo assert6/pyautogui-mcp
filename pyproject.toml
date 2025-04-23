@@ -7,4 +7,5 @@ requires-python = ">=3.11"
 dependencies = [
     "mcp[cli]>=1.6.0",
     "pyautogui>=0.9.54",
+    "pyperclipimg>=0.2.0",
 ]
