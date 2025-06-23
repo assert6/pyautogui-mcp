@@ -1,3 +1,4 @@
+```json
 "mcpServers": {
     "wechat-mcp": {
       "command": "uv",
@@ -7,3 +8,4 @@
       ]
     }
 }
+```
